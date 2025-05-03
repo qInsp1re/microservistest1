@@ -151,7 +151,6 @@ func main() {
 	log.Printf("listening on %s", port)
 	http.ListenAndServe(port, r)
 
-	// Cleanup
 	close(clicksCh)
 	wg.Wait()
 }
